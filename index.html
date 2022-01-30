@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-  <!-- 2022-01-29 Sat 15:31 -->
+  <!-- 2022-01-30 Sun 13:08 -->
   <meta http-equiv="Content-Type" content=
   "text/html; charset=us-ascii" />
   <meta name="viewport" content=
@@ -199,24 +199,22 @@
   .org-svg { width: 90%; }
   /*]]>*/
   </style>
-  <link rel="stylesheet" href=
-  "https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" type=
-  "text/css" />
+  <link rel="stylesheet" href="sakura.css" type="text/css" />
 </head>
 
 <body>
   <div id="content" class="content">
     <h1 class="title">How I Take Notes with Org-roam</h1>
 
-    <div id="orgd16b504" class="figure">
+    <div id="org8edaebc" class="figure">
       <p><img src="media/how_i_take_notes_in_org_roam/preview.png"
       alt="preview.png" /></p>
     </div>
 
-    <div id="outline-container-orge0b56b4" class="outline-2">
-      <h2 id="orge0b56b4">Preface</h2>
+    <div id="outline-container-org0c805ad" class="outline-2">
+      <h2 id="org0c805ad">Preface</h2>
 
-      <div class="outline-text-2" id="text-orge0b56b4">
+      <div class="outline-text-2" id="text-org0c805ad">
         <p>This is an internal guide explaining how I take notes in
         Org-mode and Org-roam. I write this in hopes that this will
         provide insight into my note-taking process. Please
@@ -248,10 +246,10 @@
       </div>
     </div>
 
-    <div id="outline-container-org272ea93" class="outline-2">
-      <h2 id="org272ea93">The Note-taking Mindset</h2>
+    <div id="outline-container-orgae060a4" class="outline-2">
+      <h2 id="orgae060a4">The Note-taking Mindset</h2>
 
-      <div class="outline-text-2" id="text-org272ea93">
+      <div class="outline-text-2" id="text-orgae060a4">
         <p>It&rsquo;s important not to lose sight of why we take
         notes. The primary reason to take notes is so that these
         notes <b>can serve you later on</b> in your life. This
@@ -296,10 +294,10 @@
       </div>
     </div>
 
-    <div id="outline-container-orgeebbc95" class="outline-2">
-      <h2 id="orgeebbc95">The Slipbox Setup</h2>
+    <div id="outline-container-org37d93ef" class="outline-2">
+      <h2 id="org37d93ef">The Slipbox Setup</h2>
 
-      <div class="outline-text-2" id="text-orgeebbc95">
+      <div class="outline-text-2" id="text-org37d93ef">
         <p>As much as possible, I keep my workspace simple. I
         maintain one mega slip-box: all my notes are kept within
         <code>org-roam-directory</code>. True to Luhmann&rsquo;s
@@ -349,6 +347,9 @@
         reference zettel, and one for an article.</p>
 
         <div class="org-src-container">
+          <label class="org-src-name"><span class=
+          "listing-number">Listing 2:</span> My Org-roam capture
+          templates. There is one for each zettel type.</label>
           <pre class="src src-emacs-lisp">
 <span style="color: #000000;">(</span><span style=
 "color: #5317ac;">setq</span> <span style=
@@ -415,6 +416,9 @@
         path. This is simple enough:</p>
 
         <div class="org-src-container">
+          <label class="org-src-name"><span class=
+          "listing-number">Listing 3:</span> Creating the property
+          &ldquo;type&rdquo; on my nodes.</label>
           <pre class="src src-emacs-lisp">
 <span style="color: #000000;">(</span><span style=
 "color: #5317ac;">cl-defmethod</span> <span style=
@@ -453,6 +457,9 @@
         interface, I just add it to my display template:</p>
 
         <div class="org-src-container">
+          <label class="org-src-name"><span class=
+          "listing-number">Listing 4:</span> Modifying the display
+          template to show the node &ldquo;type&rdquo;</label>
           <pre class="src src-emacs-lisp">
 <span style="color: #000000;">(</span><span style=
 "color: #5317ac;">setq</span> <span style=
@@ -474,7 +481,7 @@
 
         <p>And now it shows up!</p>
 
-        <div id="org5a7f104" class="figure">
+        <div id="org09bf257" class="figure">
           <p><img src=
           "media/how_i_take_notes_in_org_roam/completion.png" alt=
           "completion.png" /></p>
@@ -484,10 +491,10 @@
         </div>
       </div>
 
-      <div id="outline-container-org76cc203" class="outline-3">
-        <h3 id="org76cc203">Zettel Structure</h3>
+      <div id="outline-container-orgb10c69d" class="outline-3">
+        <h3 id="orgb10c69d">Zettel Structure</h3>
 
-        <div class="outline-text-3" id="text-org76cc203">
+        <div class="outline-text-3" id="text-orgb10c69d">
           <div class="org-src-container">
             <pre class="src src-org">
 <span style="color: #505050;">:PROPERTIES:</span>
@@ -513,10 +520,10 @@
       </div>
     </div>
 
-    <div id="outline-container-orgd207c06" class="outline-2">
-      <h2 id="orgd207c06">Capturing Thoughts</h2>
+    <div id="outline-container-org1c5a3f0" class="outline-2">
+      <h2 id="org1c5a3f0">Capturing Thoughts</h2>
 
-      <div class="outline-text-2" id="text-orgd207c06">
+      <div class="outline-text-2" id="text-org1c5a3f0">
         <p>I capture any thoughts I have that I would want to
         process into my slipbox using plain
         <code>org-capture</code>:</p>
@@ -564,15 +571,15 @@
       </div>
     </div>
 
-    <div id="outline-container-org74625d3" class="outline-2">
-      <h2 id="org74625d3">Creating Zettels</h2>
+    <div id="outline-container-org4129b36" class="outline-2">
+      <h2 id="org4129b36">Creating Zettels</h2>
 
-      <div class="outline-text-2" id="text-org74625d3"></div>
+      <div class="outline-text-2" id="text-org4129b36"></div>
 
-      <div id="outline-container-orgb606dd9" class="outline-3">
-        <h3 id="orgb606dd9">Reference Zettels</h3>
+      <div id="outline-container-orgb3d16ed" class="outline-3">
+        <h3 id="orgb3d16ed">Reference Zettels</h3>
 
-        <div class="outline-text-3" id="text-orgb606dd9">
+        <div class="outline-text-3" id="text-orgb3d16ed">
           <p>I create reference zettels when I&rsquo;m consuming
           material I&rsquo;ve come across. Each reference zettel
           has a corresponding <code>ROAM_REFS</code> key, which
@@ -593,10 +600,10 @@
           </dl>
         </div>
 
-        <div id="outline-container-org68ebb40" class="outline-4">
-          <h4 id="org68ebb40">Citation Management</h4>
+        <div id="outline-container-org26e1f85" class="outline-4">
+          <h4 id="org26e1f85">Citation Management</h4>
 
-          <div class="outline-text-4" id="text-org68ebb40">
+          <div class="outline-text-4" id="text-org26e1f85">
             <p>I manage my citations with <a href=
             "https://www.zotero.org/">Zotero</a>. I use the
             <a href="https://retorque.re/zotero-better-bibtex/">Better
@@ -609,7 +616,7 @@
             "https://github.com/hlissner/doom-emacs/tree/master/modules/tools/biblio">
             biblio module</a>.</p>
 
-            <div id="orgaa0720e" class="figure">
+            <div id="org4a0e649" class="figure">
               <p><img src=
               "media/how_i_take_notes_in_org_roam/zotero.png" alt=
               "zotero.png" /></p>
@@ -632,10 +639,10 @@
           </div>
         </div>
 
-        <div id="outline-container-org829f9b9" class="outline-4">
-          <h4 id="org829f9b9">Reference Citation Zettels</h4>
+        <div id="outline-container-org6a2496e" class="outline-4">
+          <h4 id="org6a2496e">Reference Citation Zettels</h4>
 
-          <div class="outline-text-4" id="text-org829f9b9">
+          <div class="outline-text-4" id="text-org6a2496e">
             <p>For each source, I create <i>one and exactly one</i>
             zettel. Sometimes this can get unwieldy: one can
             consider splitting by chapters if really necessary. To
@@ -763,11 +770,11 @@
         </div>
       </div>
 
-      <div id="outline-container-org35119e2" class="outline-3">
-        <h3 id="org35119e2">Every Zettel is a Draft until Declared
+      <div id="outline-container-orgcc2413b" class="outline-3">
+        <h3 id="orgcc2413b">Every Zettel is a Draft until Declared
         Otherwise</h3>
 
-        <div class="outline-text-3" id="text-org35119e2">
+        <div class="outline-text-3" id="text-orgcc2413b">
           <p>All zettels begin as unrefined notes. To keep my
           Zettelkasten high-quality, it is important for me to
           constantly revisit and refine these draft notes. Once I
@@ -806,16 +813,16 @@
       </div>
     </div>
 
-    <div id="outline-container-org3c87cad" class="outline-2">
-      <h2 id="org3c87cad">Guiding Principles</h2>
+    <div id="outline-container-orgb9b7ac3" class="outline-2">
+      <h2 id="orgb9b7ac3">Guiding Principles</h2>
 
-      <div class="outline-text-2" id="text-org3c87cad"></div>
+      <div class="outline-text-2" id="text-orgb9b7ac3"></div>
 
-      <div id="outline-container-org8de5ed5" class="outline-3">
-        <h3 id="org8de5ed5">Not Everything Needs To Be Done In
+      <div id="outline-container-org909de56" class="outline-3">
+        <h3 id="org909de56">Not Everything Needs To Be Done In
         Emacs</h3>
 
-        <div class="outline-text-3" id="text-org8de5ed5">
+        <div class="outline-text-3" id="text-org909de56">
           <p>One common complaint about Org-roam is mobile support:
           it is non-trivial to get Emacs up and running on mobile,
           and even then adding notes on the fly is not so easy.</p>
@@ -844,10 +851,10 @@
       </div>
     </div>
 
-    <div id="outline-container-org96c8ea7" class="outline-2">
-      <h2 id="org96c8ea7">Further Reading</h2>
+    <div id="outline-container-orgb88190a" class="outline-2">
+      <h2 id="orgb88190a">Further Reading</h2>
 
-      <div class="outline-text-2" id="text-org96c8ea7">
+      <div class="outline-text-2" id="text-orgb88190a">
         <p>Congrats on making it here! If you&rsquo;re interested
         in delving deeper into the note-taking rabbit hole, you can
         browse the following links:</p>
@@ -871,15 +878,15 @@
       </div>
     </div>
 
-    <div id="outline-container-org9b66331" class="outline-2">
-      <h2 id="org9b66331">Addendum</h2>
+    <div id="outline-container-orgf639b03" class="outline-2">
+      <h2 id="orgf639b03">Addendum</h2>
 
-      <div class="outline-text-2" id="text-org9b66331"></div>
+      <div class="outline-text-2" id="text-orgf639b03"></div>
 
-      <div id="outline-container-orgf08972e" class="outline-3">
-        <h3 id="orgf08972e">Choosing Your Citation Package</h3>
+      <div id="outline-container-org2dd984f" class="outline-3">
+        <h3 id="org2dd984f">Choosing Your Citation Package</h3>
 
-        <div class="outline-text-3" id="text-orgf08972e">
+        <div class="outline-text-3" id="text-org2dd984f">
           <p>Org-mode currently has 3 different citation keys:
           Org-ref v2, Org-ref v3, Org-mode 9.5 native citation
           keys.</p>
@@ -895,11 +902,11 @@
         </div>
       </div>
 
-      <div id="outline-container-orge258cd3" class="outline-3">
-        <h3 id="orge258cd3"><span class="todo TODO">TODO</span> How
+      <div id="outline-container-orge39f7a5" class="outline-3">
+        <h3 id="orge39f7a5"><span class="todo TODO">TODO</span> How
         to Write Good Zettels</h3>
 
-        <div class="outline-text-3" id="text-orge258cd3">
+        <div class="outline-text-3" id="text-orge39f7a5">
           <p>This is a really difficult skill, one that I&rsquo;m
           still trying to get adept at as well. It&rsquo;s
           obviously a lot more nuanced and complex than this, but
@@ -907,10 +914,10 @@
           useful.</p>
         </div>
 
-        <div id="outline-container-org8ae6a0c" class="outline-4">
-          <h4 id="org8ae6a0c">Zettels should be Atomic</h4>
+        <div id="outline-container-orga0d625c" class="outline-4">
+          <h4 id="orga0d625c">Zettels should be Atomic</h4>
 
-          <div class="outline-text-4" id="text-org8ae6a0c">
+          <div class="outline-text-4" id="text-orga0d625c">
             <p>A large part of content understanding is being able
             to break things down into simple concepts and linking
             them together. If your zettels are getting extremely
@@ -926,10 +933,10 @@
           </div>
         </div>
 
-        <div id="outline-container-org835741a" class="outline-4">
-          <h4 id="org835741a">Zettels should be Encapsulated</h4>
+        <div id="outline-container-orgb4b0b02" class="outline-4">
+          <h4 id="orgb4b0b02">Zettels should be Encapsulated</h4>
 
-          <div class="outline-text-4" id="text-org835741a">
+          <div class="outline-text-4" id="text-orgb4b0b02">
             <p>A zettel should be readable on its own, without
             surrounding context.</p>
 
@@ -953,10 +960,10 @@
         </div>
       </div>
 
-      <div id="outline-container-orgf92a5c5" class="outline-3">
-        <h3 id="orgf92a5c5">What About Everything Else?</h3>
+      <div id="outline-container-org836e98a" class="outline-3">
+        <h3 id="org836e98a">What About Everything Else?</h3>
 
-        <div class="outline-text-3" id="text-orgf92a5c5">
+        <div class="outline-text-3" id="text-org836e98a">
           <p>Org-roam ships other features, but here&rsquo;s why I
           don&rsquo;t use them.</p>
 
@@ -995,10 +1002,10 @@
         </div>
       </div>
 
-      <div id="outline-container-org2ae82c7" class="outline-3">
-        <h3 id="org2ae82c7">What about Task Management?</h3>
+      <div id="outline-container-orgc96462f" class="outline-3">
+        <h3 id="orgc96462f">What about Task Management?</h3>
 
-        <div class="outline-text-3" id="text-org2ae82c7">
+        <div class="outline-text-3" id="text-orgc96462f">
           <p>It&rsquo;s tempting to combine task management (e.g.
           <a href="https://gettingthingsdone.com/">Getting Things
           Done (GTD)</a>) with your Zettelkasten. This is the curse
@@ -1027,10 +1034,10 @@
       </div>
     </div>
 
-    <div id="outline-container-org7286b49" class="outline-2">
-      <h2 id="org7286b49">Versions</h2>
+    <div id="outline-container-org82c04fc" class="outline-2">
+      <h2 id="org82c04fc">Versions</h2>
 
-      <div class="outline-text-2" id="text-org7286b49">
+      <div class="outline-text-2" id="text-org82c04fc">
         <p>Here are versions of the relevant software I&rsquo;m
         using.</p>
         <pre class="example">
@@ -1047,7 +1054,7 @@ Org-roam: v2.2.0-13-gaafe411
     <p class="email">Email: <a href=
     "mailto:jethrokuan95@gmail.com">jethrokuan95@gmail.com</a></p>
 
-    <p class="date">Created: 2022-01-29 Sat 15:31</p>
+    <p class="date">Created: 2022-01-30 Sun 13:08</p>
   </div>
 </body>
 </html>
