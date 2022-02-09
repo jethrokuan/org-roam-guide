@@ -4,7 +4,7 @@
 #+title: How I Take Notes with Org-roam
 #+author: Jethro Kuan
 #+EXPORT_FILE_NAME: index
-#+HTML_HEAD: <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+#+HTML_HEAD: <link rel="stylesheet" href="sakura.css">
 #+filetags: :draft:
 #+options: num:nil author:t email:t toc:nil
 
@@ -34,49 +34,55 @@ GitHub issue [[https://github.com/jethrokuan/org-roam-guide/issues][here]].
 
 * The Note-taking Mindset
 
-It's important not to lose sight of why we take notes. The primary reason to
-take notes is so that these notes *can serve you later on* in your life. This
-means that:
+I take notes because I want these notes to to *serve me later on* in my life.
+This is system is meant to be an extension of my physical brain: an evolving
+cache of information that I will at some point want to recall.
 
-1. All fleeting notes you take must be regularly processed: turned into
-   permanent notes, or discarded entirely when no longer needed
-2. All permanent notes must be concise, standalone, and readable
+This has several implications. This means that:
+
+1. I want the notes in my system to contain only what's relevant to me. This
+   changes over time: I need a way to delete/add notes freely without
+   disruption.
+2. All fleeting notes I take must be regularly processed: turned into permanent
+   notes, or discarded entirely when no longer needed
 3. Permanent notes should resurface when relevant to the current topic at hand
+
+The first point has several implications. Notes must be well-factored and
+self-contained, such that deleting them will not result in a sudden gap in
+context.
 
 These are some behaviour I observed in the wild that don't quite gel with me:
 
-- taking too much notes :: especially prevelant is highlighting (copying text
-  wholesale) from sources. It's important to be concise in your notes: distill
-  what you've read, and rewrite ideas in your own words to reinforce
-  understanding.
-- taking notes about everything :: To maintain a high signal-to-noise ration, we
+- taking too much notes :: especially prevelant is the copying of text wholesale
+  from sources. Notes should be a distillation of what you've read: rewriting
+  ideas and concepts in your own words helps reinforce understanding.
+- taking notes about everything :: To maintain a high signal-to-noise ratio, we
   need to be picky about what is added into your Zettelkasten.
-- having an overly-complex note-taking workflow :: There is a certain point
-  where automation becomes detrimental to note-taking. The quality of notes is
-  highly correlated with the amount of deliberation for each character you put
-  into your slipbox.
+- having an overly-complex note-taking workflow :: Automation becomes
+  detrimental to note-taking. The quality of notes is highly correlated with the
+  amount of deliberation for each character you put into your slipbox.
 
 * The Slipbox Setup
 
-As much as possible, I keep my workspace simple. I maintain one mega slip-box:
-all my notes are kept within ~org-roam-directory~. True to Luhmann's original
-implementation, within the mega slip-box I keep two primary slipboxes.
+I keep my workspace simple. I maintain one mega slip-box: all my notes are kept
+within ~org-roam-directory~. True to Luhmann's original implementation, within
+the mega slip-box I keep two primary slipboxes.
 
 The first slipbox is the *reference slipbox*. It contains zettels that contain
 information from various sources I consume (books, articles, papers etc.). Each
-zettel points back to the original source.
+reference zettel points back to the original source.
 
 The second slipbox, for the lack of a better name, is the *main slipbox*. It
 contains my own ideas and concepts, extracted from the material I read. They
-often point back to reference slipbox zettels.
+point back to reference slipbox zettels.
 
 I maintain an additional *articles "slipbox"*. This is a folder containing
 articles that are a culmination of my ideas in the main slipbox, as well as
 references from the reference slipbox. This is an example of one such article.
 
-I also have an inbox file, where unprocessed ideas are captured.
+Finally I have an inbox file, where unprocessed ideas are captured.
 
-In all, I have a directory structure that looks like this:
+Altogether, I have a directory structure that looks like this:
 
 #+caption: My org-roam-directory structure. Each slipbox is contained in their own folder. My journals and written articles are also in their own folder.
 #+BEGIN_SRC text
@@ -91,6 +97,7 @@ In all, I have a directory structure that looks like this:
 This directory structure is reflected in my three capture templates, one for a
 main zettel, one for a reference zettel, and one for an article.
 
+#+caption: My Org-roam capture templates. There is one for each zettel type.
 #+BEGIN_SRC emacs-lisp :tangle no :exports code
 (setq org-roam-capture-templates
       '(("m" "main" plain
@@ -122,6 +129,7 @@ Thankfully, the code is architectured such that you could define your own
 properties on nodes. In this case, I want to define the "type" of note based on
 its file path. This is simple enough:
 
+#+caption: Creating the property "type" on my nodes.
 #+begin_src emacs-lisp :tangle no :exports code
 (cl-defmethod org-roam-node-type ((node org-roam-node))
   "Return the TYPE of NODE."
@@ -135,6 +143,7 @@ its file path. This is simple enough:
 
 Now, for ~type~ to show up in the completion interface, I just add it to my display template:
 
+#+caption: Modifying the display template to show the node "type"
 #+begin_src emacs-lisp :tangle no :exports code
 (setq org-roam-node-display-template
       (concat "${type:15} ${title:*} " (propertize "${tags:10}" 'face 'org-tag)))
